@@ -1,0 +1,7 @@
+# 设置端口为8080
+server:
+  port: 8080
+spring:
+    thymeleaf:
+        cache:false
+        encoding:UTF-8

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" type="text/css">
+</head>
+<script type="text/javascript">
+
+</script>
+<body>
+<div class="main">
+    <div class="title">
+        <span>密码登录</span>
+    </div>
+
+    <div class="title-msg">
+        <span>请输入登录账户和密码</span>
+    </div>
+
+    <form class="login-form" method="post" action="http://localhost:8080/loginHandle" >
+        <!--输入框-->
+        <div class="input-content">
+            <!--autoFocus-->
+            <div>
+                <input type="text" autocomplete="off"
+                       placeholder="用户名" name="name" required/>
+            </div>
+
+            <div style="margin-top: 16px">
+                <input type="password"
+                       autocomplete="off" placeholder="登录密码" name="pwd" required maxlength="32"/>
+            </div>
+        </div>
+
+        <!--登入按钮-->
+        <div style="text-align: center">
+            <button type="submit" class="enter-btn" >登录</button>
+        </div>
+    </form>
+
+</div>
+</body>
+</html>

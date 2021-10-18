@@ -1,0 +1,7 @@
+# 门户网站设置端口为8888
+server:
+  port: 8888
+spring:
+    thymeleaf:
+        cache:false
+        encoding:UTF-8
