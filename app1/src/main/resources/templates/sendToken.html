@@ -13,12 +13,18 @@
     </script>
 </head>
 <body onload="subToken()">
-<form id="form1" th:action="${redirectUrl}"  method="post">
+<form id="form1" action="http://localhost:8080/getToken" method="post">
     <label>
         <input name="token" type="hidden" th:value="${token}">
     </label>
     <label>
         <input name="username" type="hidden" th:value="${username}">
+    </label>
+    <label>
+        <input name="redirectUrl" type="hidden" th:value="${redirectUrl}">
+    </label>
+    <label>
+        <input name="sourceType" type="hidden" th:value="${sourceType}">
     </label>
 </form>
 </body>

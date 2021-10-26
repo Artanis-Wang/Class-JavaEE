@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>sendMsg</title>
+
+    <script type="text/javascript">
+        function sendMsg()
+        {
+            console.log("执行！")
+            setTimeout("document.getElementById('form1').submit()",100);
+        }
+    </script>
+</head>
+<body onload="sendMsg()">
+<form id="form1" th:action="${sourceRedirectUrl}"  method="post">
+    <label>
+        <input name="redirectUrl" type="hidden" th:value="${redirectUrl}">
+    </label>
+    <label>
+        <input name="username" type="hidden" th:value="${username}">
+    </label>
+    <label>
+        <input name="newToken" type="hidden" th:value="${newToken}">
+    </label>
+    <label>
+        <input name="msg" type="hidden" th:value="${msg}">
+    </label>
+    <label>
+        <input name="sourceType" type="hidden" th:value="${sourceType}">
+    </label>
+</form>
+</body>
+</html>

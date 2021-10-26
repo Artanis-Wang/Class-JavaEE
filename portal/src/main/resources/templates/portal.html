@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>SSO中转系统</title>
+    <link rel="stylesheet" href="portalstyle.css" type="text/css">
 </head>
-<body>
-<p>
-    <a href="http://localhost:8081/loginA">系统A</a>
-</p>
-<p>
-    <a href="http://localhost:8081/loginB">系统B</a>
-</p>
+<script type="text/javascript">
+
+</script>
+<body style="background-color: #3e86a0">
+
+<div>
+    <div  style="float:left;padding-top: 150px;padding-left: 300px">
+        <form id="form1" action="http://localhost:8081/app1" method="get">
+            <button name="sysA" type="submit" class="enter-btn">
+                身高管理系统
+            </button>
+        </form>
+    </div>
+
+    <div  style="padding-top: 150px;padding-left: 1000px" >
+        <form id="form2" action="http://localhost:8082/app2" method="get">
+            <button name="sysB" type="submit" class="enter-btn">
+                体重管理系统
+            </button>
+        </form>
+    </div>
+</div>
+<!--<p>-->
+<!--    <a href="http://localhost:8081/loginA">系统A</a>-->
+<!--</p>-->
+<!--<p>-->
+<!--    <a href="http://localhost:8081/loginB">系统B</a>-->
+<!--</p>-->
 </body>
 </html>

@@ -1,0 +1,7 @@
+# 门户网站设置端口为8081
+server:
+  port: 8081
+spring:
+    thymeleaf:
+        cache:false
+        encoding:UTF-8

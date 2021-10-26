@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="login.css" type="text/css">
+    <link rel="stylesheet" href="loginByPwd.css" type="text/css">
 </head>
 <script type="text/javascript">
 
@@ -18,18 +18,20 @@
         <span>请输入登录账户和密码</span>
     </div>
 
-    <form class="login-form" method="post" action="http://localhost:8080/loginHandle" >
+    <form class="login-form" method="post" action="http://localhost:8080/loginPwd" >
         <!--输入框-->
         <div class="input-content">
             <!--autoFocus-->
             <div>
                 <input type="text" autocomplete="off"
-                       placeholder="用户名" name="name" required/>
+                       placeholder="用户名" name="username" required/>
             </div>
-
             <div style="margin-top: 16px">
                 <input type="password"
                        autocomplete="off" placeholder="登录密码" name="pwd" required maxlength="32"/>
+            </div>
+            <div>
+                <input type="hidden" name="redirectUrl" th:value="${redirectUrl}">
             </div>
         </div>
 
